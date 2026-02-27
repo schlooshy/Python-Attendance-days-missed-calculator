@@ -1,10 +1,12 @@
 import time
 
+
+
 while True:
     enter = input("Would you like to enter the attendance percentage/days missed calculator? (y/n): ")
-    schoolspecific = input("Would you like to use the [schoolname] specific calculator? (y/n): ")
     if enter == "y":
-        if schoolspecific == "n":
+        newsomeacademy = input("Would you like to use the Newsome Academy specific calculator? (y/n): ")
+        if newsomeacademy == "n":
             print("Count the following from August 1st to July 31st: ")
             holidayweeks = input("Enter the amount of holiday weeks there are: ")
             insetdays = input("Enter the amount of inset days there are: ")
@@ -18,7 +20,7 @@ while True:
                 print("Invalid Input!")
                 continue
 
-        elif schoolspecific == "y":
+        elif newsomeacademy == "y":
             holidayweeks = 39
             insetdays = 5
             bankholidays = 0
@@ -30,8 +32,8 @@ while True:
         totalschooldays = 365 - totalbreakdays
         onepercent = totalschooldays/100
 
-
-        while True:
+        running = True
+        while running:
             while True:
                 attendance = input("Enter an attendance percentage (no %): ")
                 try:
@@ -52,7 +54,7 @@ while True:
             carryon=input("Would you like to continue? ('n' || exit / any other key || continue) : ")
 
             if carryon == "n":
-                break
+                running = False
             else:
                 continue
 
