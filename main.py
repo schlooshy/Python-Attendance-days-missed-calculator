@@ -23,7 +23,7 @@ while True:
         elif newsomeacademy == "y":
             holidayweeks = 39
             insetdays = 5
-            bankholidays = 0
+            bankholidays = 8
 
         else:
             print("Error!")
